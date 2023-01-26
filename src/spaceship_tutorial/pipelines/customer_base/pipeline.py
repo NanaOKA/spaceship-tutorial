@@ -16,5 +16,11 @@ def create_pipeline(**kwargs) -> Pipeline:
                 outputs=None,
                 name="generate_customer_base_node",
             ),
+            node(
+                func=run_sql_queries,
+                inputs=["customer_base_sql_script", "params:na_sql_queries", "params:redshift"],
+                outputs=None,
+                name="generate_na_customer_base_node",
+            ),
         ]
     )

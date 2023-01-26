@@ -19,4 +19,17 @@ sql_queries:
     customer_info_table: sas_customer_mstr_bu_vw
     transaction_table: sas_transaction_all_vw
     customer_group: p_2021
-    pdc_slides_bucket: rl-sandbox/nana/kedro_tutorial/;
+    pdc_slides_bucket: rl-sandbox/nana/kedro_tutorial/
+
+na_sql_queries:
+    purchase_start_date: 2021-01-01
+    purchase_end_date: 2021-02-01
+    bu_a: 1
+    bu_b: 2
+    bu_c: 3
+    region: na
+    database_name: na_zeta
+    customer_info_table: na_sas_customer_mstr_bu_vw
+    transaction_table: na_sas_transaction_all_vw
+    customer_group: p_2021
+    pdc_slides_bucket: rl-sandbox/nana/kedro_tutorial/
