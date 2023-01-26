@@ -39,7 +39,7 @@ CREATE TABLE #customer_spend_aggregates AS
         MIN(spend) as minimum_spend,
         MAX(spend) as maximum_spend,
         AVG(spend) as average_spend,
-        STDDEV(total_spend) as stddev_total_spend,
+        STDDEV(spend) as stddev_total_spend,
         SUM(spend) as total_spend,
         PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY spend) as median_spend,
         PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY spend) as spend_percentile_25,
