@@ -1,0 +1,22 @@
+# This is a boilerplate parameters config generated for pipeline 'customer_base'
+# using Kedro 0.18.4.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://kedro.readthedocs.io/en/0.18.4/kedro_project_setup/configuration.html#parameters
+redshift:
+    host: rl-global-prod.chsqs2fzlkfe.eu-west-1.redshift.amazonaws.com
+    database: rlglobaldc
+    port: 5439
+
+sql_queries:
+    purchase_start_date: 2021-01-01
+    purchase_end_date: 2021-02-01
+    bu_a: 6
+    bu_b: 16
+    bu_c: 10
+    region: eu
+    database_name: eu_zeta
+    customer_info_table: sas_customer_mstr_bu_vw
+    transaction_table: sas_transaction_all_vw
+    customer_group: p_2021
+    pdc_slides_bucket: rl-sandbox/nana/kedro_tutorial/;
