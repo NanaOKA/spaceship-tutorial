@@ -4,6 +4,8 @@ generated using Kedro 0.18.4
 """
 from typing import Dict
 import logging
+import numpy as np
+import pandas as pd
 
 from spaceship_tutorial.pipelines.utils.redshift import Redshift
 from spaceship_tutorial.pipelines.utils.sql_formatter import Formatter
@@ -38,3 +40,13 @@ def run_sql_queries(data, sql_parameters: Dict, redshift: Dict):
     results = connector.execute_multiple(statements)
 
     log.info('Customer base')
+
+def customer_spend_aggregates(data):
+    log = logging.getLogger(__name__)
+    agg_data = pd.pivot_table(data=data, index='business_unit', values=['total_spend'], aggfunc=[np.median,np.mean])
+    log.info(f'{agg_data}')
+    return agg_data
+
+def compute_spend_average(data):
+    spend_ave = data['total_spend'].mean()
+    return spend_ave
