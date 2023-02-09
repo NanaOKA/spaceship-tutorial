@@ -32,3 +32,23 @@ regressor:
 customer_base_sql_script:
     type: text.TextDataSet
     filepath: sql_scripts/customer_aggregations.sql
+
+na_customer_spend:
+    type: pandas.CSVDataSet
+    filepath: s3://rl-sandbox/nana/kedro_tutorial/na/p_2021/customer_spend_aggregates.csv000
+    credentials: sandbox_s3
+
+eu_customer_spend:
+    type: pandas.CSVDataSet
+    filepath: s3://rl-sandbox/nana/kedro_tutorial/eu/p_2021/customer_spend_aggregates.csv000
+    credentials: sandbox_s3
+
+na_customer_spend_agg:
+    type: pandas.CSVDataSet
+    filepath: s3://rl-sandbox/nana/kedro_tutorial/na/p_2021/bu_aggregates.csv
+    credentials: sandbox_s3
+    save_args:
+      mode: w
+      index: False
+
+
