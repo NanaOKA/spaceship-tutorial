@@ -1,0 +1,15 @@
+artifact_uri: file:///c:/Users/abanan/Desktop/deep_dive_sessions/spaceship-tutorial/notebooks/mlruns/0/55b5cfd412874f78bf9445414fdd422c/artifacts
+end_time: 1676540420250
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 55b5cfd412874f78bf9445414fdd422c
+run_name: sedate-stork-873
+run_uuid: 55b5cfd412874f78bf9445414fdd422c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1676540413735
+status: 3
+tags: []
+user_id: abanan
